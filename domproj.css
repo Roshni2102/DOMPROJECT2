@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+     
+    }
+
+body{
+    background-color: rgb(57, 81, 94);
+    margin: 50px 2;
+}
+
+.container-title{
+    text-align: center;
+    color: rgb(236, 229, 229);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(236, 229, 229);
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow for better visibility */
+}
+
+.inputcol{
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 50% 10%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+textarea{
+    width: 50%;
+    height: 40px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid rgb(182, 175, 175);
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 20%;
+    overflow: hidden;
+}
+
+button{
+    width: 10%;
+    height: 40px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid rgb(182, 175, 175);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 4px rgba(83, 78, 78, 0.5); /* Added shadow for better visibility */
+    position: absolute;
+    left: 71%;
+}
+button:hover{
+    background-color: rgb(182, 175, 175);
+    cursor: pointer;
+}
+
+.todolist{
+   margin-top: 90px;
+   margin-left: 110px;
+   
+}
+
+@media screen and (max-width: 768px) {
+    .inputcol {
+        grid-template-columns: 1fr; /* Stack the input and button on smaller screens */
+        width: 90%; /* Adjust width for smaller screens */
+    }
+    textarea, button {
+        width: 100%; /* Full width for both elements */
+        margin-left: 50px; /* Center the elements */
+        margin-right: 50px; /* Center the elements */
+        position: static; /* Remove absolute positioning */
+    }
+    button {
+        display: grid;
+        justify-content: center; /* Center the button */
+        align-items: center;
+        width: 80%; /* Adjust width for smaller screens */
+        height: 40px; /* Maintain height */
+        margin-left: auto;
+        margin-top: 10px; /* Add some space between textarea and button */
+    }
+    .todolist {
+        margin-left: 0; /* Center the todo list on smaller screens */
+    }
+    
+}
+
+.itemall{
+    display: grid;
+    grid-template-columns: 60% 2% 5% 20%; /* Adjusted to fit the buttons */
+    justify-content: center;
+    margin-bottom: 2px; /* Space between items */
+}
+
+.item{   
+    word-wrap: break-word; /* Ensures long text wraps within the item */
+    word-break: break-all; /* Breaks long words to prevent overflow */
+    border-radius: 10px; /* Rounded corners for the left side */
+    display: grid;
+    align-content: center; /* Center the text vertically */
+    font-size: 20px;
+    background-color: rgb(255, 255, 255); 
+    padding: 5px;
+} 
+
+
+.item, .check-button, .trash-button {
+    display: inline-block;
+    margin: 2px;
+}
+
+button.trash-button{
+    width: 50px;
+    height: 34px;
+    border-radius: 30%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
